@@ -1,0 +1,44 @@
+[
+    { 
+        "name"          : "Matcha Temple",
+        "image"         : "/files/images/case-study-matcha.png",
+        "link"          : "https://www.mpares.com",
+        "intro"         : "If you like Matcha, then Matcha Temple is for you. A power packed tin of goodness for your body. Happily using Gatsboy for eCommerce management",
+        "testimonial"   : "Gatsboy have reshaped our website completely, saving us huge fee's from previous software that didn't offer much value. We now have a brillant website and excellent team to support our growth."
+    },
+    { 
+        "name"          : "MPares",
+        "image"         : "/files/images/case-study-mpares.png",
+        "link"          : "https://www.mpares.com",
+        "intro"         : "Greek company offering the finest homemade like energy Bars and Sandwitches. Certified according to ISO 22000, food safety is considered as one of the the most important advantages of all our partners.",
+        "testimonial"   : "Ήθελα ένα γρήγορό όμορφο και ταυτόχρονα απλό website για το Σπιτικό Παπακωνσταντίνου. Όλα αυτα τα βρήκα στο Gatsboy και μάλιστα σε πολύ προσιτή τιμή. Θα τους πρότεινα ανεπιφύλακτα."
+    },
+    { 
+        "name"          : "Thred",
+        "image"         : "/files/images/case-study-thred.png",
+        "link"          : "http://thred.agency",
+        "intro"         : "An innovative communications agency with a difference, wanted a unique interactive experience.",
+        "testimonial"   : "Our website is great! Great design, great performance, great feedback and our clients love it."
+    },
+    { 
+        "name"          : "Nuttifox",
+        "image"         : "/files/images/case-study-nuttifox.png",
+        "link"          : "https://nuttifox.com",
+        "intro"         : "Our parent company Nuttifox, specialists in WordPress & React, making the most of the Gatsboy benefits.",
+        "testimonial"   : "We are proud of our Gatsboy team. Dedicated individuals who are working at the forefront of modern web development for those small business owners who need the most support."
+    },
+    { 
+        "name"          : "Grill'd",
+        "image"         : "/files/images/case-study-grilld.png",
+        "link"          : "https://grilld.uk",
+        "intro"         : "Like your grill'd Chicken? Then Grill'd from Bangor, County Down is the place for you. ",
+        "testimonial"   : "Gatsboy are very helpful and always on-hand to answer technical questions and work with our POS vendor to integrate new features."
+    },
+    { 
+        "name"          : "Interbuilding Projects",
+        "image"         : "/files/images/case-study-interbuilding.png",
+        "link"          : "https://www.interbuildingprojects.co.uk",
+        "intro"         : "Local trusted building services company. Looking to grow their online presence and use Gatsboy's managed service.",
+        "testimonial"   : "Very responsive to requests and were happy to work with us to ensure our website was right. "
+    }
+]

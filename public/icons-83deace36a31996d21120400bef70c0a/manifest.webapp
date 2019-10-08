@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "name": "justbeds-build-bootstrap-netlify",
+  "description": null,
+  "icons": {
+    "60": "/icons-83deace36a31996d21120400bef70c0a/firefox_app_60x60.png",
+    "128": "/icons-83deace36a31996d21120400bef70c0a/firefox_app_128x128.png",
+    "512": "/icons-83deace36a31996d21120400bef70c0a/firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": "Gatsboy Web",
+    "url": "https://gatsboy.com"
+  }
+}
