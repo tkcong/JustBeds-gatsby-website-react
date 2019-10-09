@@ -1,78 +1,87 @@
 module.exports = {
   siteMetadata: {
     title: 'Just Beds',
-    description: 'Just Beds',
-    author: 'Gatsboy Web Development',
-    authorLink: 'https://gatsboy.com',
-    siteUrl: 'https://gatsboy.com',
+    description: 'Just Beds Shopping list website',
+    author: 'Risk Taker',
     disqus: 'false',
-    ogImage : '/images/GBMeta.png',
+    ogImage: '/images/GBMeta.png',
   },
   plugins: [
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages'
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/markdown/products/student`,
-        name: 'student'
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/assets/images`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `thumbnail`,
-        path: `${__dirname}/src/markdown/products/student/`,
-      },
-    },
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [
-          'gatsby-remark-prismjs',
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-relative-images',
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 750,
-              linkImagesToOriginal: false
-            }
-          }
-        ]
-      }
-    },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-      }
-    },
-    'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-sass',
       options: {
         includePaths: [`${__dirname}/node_modules`, `${__dirname}/src/`],
-        precision: 8
       }
     },
-    'gatsby-plugin-netlify-cms',
-    'gatsby-plugin-sitemap',
-    'gatsby-plugin-netlify',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    //'gatsby-transformer-remark',
+    {
+        resolve: 'gatsby-transformer-remark',
+        options: {
+            plugins: [
+                'gatsby-remark-relative-images',
+                {
+                    resolve: 'gatsby-remark-images',
+                    options: {
+                        maxWidth: 250,
+                        linkImagesToOriginal: false
+                    }
+                }
+            ]
+        }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/`,
+//        name: 'pages'
+      }
+    },
+
+    // {
+    //   resolve: 'gatsby-source-filesystem',
+    //   options: {
+    //     path: `${__dirname}/src/markdown/products`,
+    //     name: 'products'
+    //   }
+    // },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `images`,
+    //     path: `${__dirname}/src/assets/images`,
+    //   },
+    // },
+
+
+
+    //'gatsby-remark-prismjs',
+    //'gatsby-remark-copy-linked-files',
+    // {
+    //   resolve: 'gatsby-transformer-remark',
+    //   options: {
+    //     plugins: [
+    //       'gatsby-remark-prismjs',
+    //       'gatsby-remark-copy-linked-files',
+    //       'gatsby-remark-relative-images',
+    //       {
+    //         resolve: 'gatsby-remark-images',
+    //         options: {
+    //           maxWidth: 750
+    //         }
+    //       }
+    //     ]
+    //   }
+    // },
+    //'gatsby-plugin-manifest',
+    //'gatsby-plugin-offline',
+    
+
+
+
+    //'gatsby-plugin-sitemap',
     {
       resolve: `gatsby-plugin-favicon`,
       options: {

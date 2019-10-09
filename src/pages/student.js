@@ -1,24 +1,24 @@
-import React from "react";
-import { StaticQuery, graphql } from "gatsby";
-import { Container } from "reactstrap";
-import Link from "gatsby-link";
+import React from "react"
+import { StaticQuery, graphql, Link } from "gatsby"
+import { Container } from "reactstrap"
+import Img from "gatsby-image"
 
-import Layout from "../components/layout";
+import Layout from "../components/layout"
 import ThreeNav from '../components/threeBlocks'
 
 function getStudent(data) {
-  const PostsArray = [];
-  data.allMarkdownRemark.edges.forEach(post =>
+  const PostsArray = []
+  data.allMarkdownRemark.edges.forEach(post => {
     PostsArray.push(
-      <div className="productbox col-sm p-3 mx-2 mb-3">
+      <div className="productbox col-md p-3 mx-2 mb-3">
         <Link to={post.node.frontmatter.path} className="title">
-          <img src={post.node.frontmatter.thumbnail} alt="product"/>
+          <Img fluid={post.node.frontmatter.featuredImage.childImageSharp.fluid} />
           {post.node.frontmatter.title}
         </Link>
       </div>
     )
-  );
-  return PostsArray;
+  });
+  return PostsArray
 }
 
 const Student = props => (
@@ -40,14 +40,20 @@ const Student = props => (
       <Container className="py-3 mobile">
       <StaticQuery
         query={graphql`
-          query MyQuery {
-            allMarkdownRemark(filter: { frontmatter: { date: {} } }) {
+          query {
+            allMarkdownRemark {
               edges {
                 node {
                   frontmatter {
                     title
                     path
-                    thumbnail
+                    featuredImage {
+                      childImageSharp {
+                        fluid(maxWidth: 100) {
+                          ...GatsbyImageSharpFluid
+                        }
+                      }
+                    }
                   }
                 }
               }

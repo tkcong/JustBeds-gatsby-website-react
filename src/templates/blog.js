@@ -1,25 +1,28 @@
 import React from 'react'
 import { Container } from 'reactstrap'
 import Helmet from 'react-helmet'
-import { graphql } from 'gatsby'
-import Link from 'gatsby-link'
+import { graphql, Link } from 'gatsby'
 import { FaLongArrowAltLeft } from 'react-icons/fa';
+import Img from "gatsby-image"
+
 import Layout from '../components/layout'
 
 export default function Template ({ data }) {
   const { markdownRemark: post } = data
   return (
     <Layout>
+    <Container>
       <Link to="/ta-nea-mas" className="back-button"><FaLongArrowAltLeft /></Link>
       <div>
-        <Helmet title={`Τα νέα μας | ${post.frontmatter.title}`}>
+        <Helmet title={`${post.frontmatter.title}`}>
         </Helmet>
         <Container>
-          <h1 className='display-3'>{post.frontmatter.title}</h1>
+          <h2>{post.frontmatter.title}</h2>
         </Container>
-        <img className="featuredBig" src={post.frontmatter.thumbnail} alt={post.frontmatter.title}></img>
-        <Container className="blogContent" dangerouslySetInnerHTML={{ __html: post.html }} />
+        <Img className="featuredBig" fluid={post.frontmatter.featuredImage.childImageSharp.fluid} alt={post.frontmatter.title} />
+        {/*<Container className="blogContent" dangerouslySetInnerHTML={{ __html: post.html }} />*/}
       </div>
+    </Container>
     </Layout>
   )
 }
@@ -35,10 +38,16 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
+        title
         path
         date(formatString: "DD-MM-YYYY")
-        title
-        thumbnail
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
 
@@ -48,7 +57,6 @@ export const pageQuery = graphql`
           frontmatter{
             title
             path
-            thumbnail
           }
         }
       }
