@@ -10,9 +10,9 @@ import img05 from '../assets/images/instagram/sofa.png'
 import img06 from '../assets/images/instagram/table.png'
 
 const Instagram = (props) => (
-    <Container className="m-0 p-0">
+    <Container>
         <div className="row">
-          <Link to='/dinning' className='col-sm productbox p-0 mx-2 mb-3'>
+          <Link to='/dinning' className='col-sm productbox p-0 mr-2 mb-3'>
             <img src={img01} alt="alt"></img>
           </Link>
 
@@ -32,7 +32,7 @@ const Instagram = (props) => (
             <img src={img05} alt="alt"></img>
           </Link>
 
-          <Link to='/hotels' className='col-sm productbox p-0 mx-2 mb-3'>
+          <Link to='/hotels' className='col-sm productbox p-0 ml-2 mb-3'>
             <img src={img06} alt="alt"></img>
           </Link>
       </div>

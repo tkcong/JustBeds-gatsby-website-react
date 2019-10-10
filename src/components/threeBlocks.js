@@ -3,7 +3,7 @@ import { Container } from 'reactstrap'
 import Link from 'gatsby-link'
 
 const threeBlocks = (props) => (
-    <Container className="m-0 p-0">
+    <Container className="m-0 pr-1">
         <div className="row">
           <Link to='/property' className='col-sm one boxes p-4 pb-1 mx-0 mb-3'>
             <div className="border">

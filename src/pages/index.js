@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container } from 'reactstrap'
+import { Link } from "gatsby"
 
 import Layout from '../components/layout'
 import ContactForm from '../components/contactform'
@@ -17,7 +18,7 @@ const Home = ({ data }) => {
             <div className="content">
               <div className='col-12'>
                 <h1>Quality, cost effective furniture</h1>
-                <a href="/" className="cta tick p-4">Start Saving Here</a>
+                <Link to="/contact" className="cta tick p-4">Start Saving Here</Link>
               </div>
             </div>
           </div>
@@ -60,7 +61,7 @@ const Home = ({ data }) => {
         <Instagram />
       </Container>
 
-      <Container>
+      <Container className="mb-4" >
         <h4>Testimonials</h4>
         <Testimonials />
       </Container>

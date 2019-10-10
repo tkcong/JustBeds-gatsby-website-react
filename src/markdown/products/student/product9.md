@@ -1,14 +1,11 @@
 ---
 contentType: blog
-path: /student/product01
+path: /student/product9
+category: student
 hidden: true
-title: Example Blog Post
-featuredImage: ./images/product1.png
+title: Wardrobe / Draws
+featuredImage: ./images/product9.png
 date: 2017-08-08T17:12:33.962Z
-attachments:
-  - filename: /images/product9.png
-related:
-  - post: /examples/about
-thumbnail: /images/product9.png
 ---
-This is an example product. It has all the possible fields filled out.
+
+This is a product1. It has all the possible fields filled out.

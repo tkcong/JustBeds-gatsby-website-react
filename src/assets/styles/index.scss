@@ -1,0 +1,820 @@
+/*
+** Designed by Risk Taker
+*/
+
+/* ------------------ vendor ------------------ */
+
+// Bootstrap 4 & Bootswatch Cosmo theme
+// Feel free to comment out anything you're not using
+//// bootswatch theme overrides
+// @import "bootswatch/dist/cerulean/variables";
+@import "bootswatch/dist/cosmo/variables";
+// @import "bootswatch/dist/cyborg/variables";
+// @import "bootswatch/dist/darkly/variables";
+// @import "bootswatch/dist/flatly/variables";
+// @import "bootswatch/dist/journal/variables";
+// @import "bootswatch/dist/litera/variables";
+// @import "bootswatch/dist/lumen/variables";
+// @import "bootswatch/dist/lux/variables";
+// @import "bootswatch/dist/materia/variables";
+// @import "bootswatch/dist/minty/variables";
+// @import "bootswatch/dist/pulse/variables";
+// @import "bootswatch/dist/sandstone/variables";
+// @import "bootswatch/dist/simplex/variables";
+// @import "bootswatch/dist/sketchy/variables";
+// @import "bootswatch/dist/slate/variables";
+// @import "bootswatch/dist/solar/variables";
+// @import "bootswatch/dist/spacelab/variables";
+// @import "bootswatch/dist/superhero/variables";
+// @import "bootswatch/dist/united/variables";
+// @import "bootswatch/dist/yeti/variables";
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/print";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/code";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/tables";
+// @import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+// @import "bootstrap/scss/transitions";
+@import "bootstrap/scss/dropdown";
+// @import "bootstrap/scss/button-group";
+// @import "bootstrap/scss/input-group";
+// @import "bootstrap/scss/custom-forms";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+@import "bootstrap/scss/card";
+// @import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/pagination";
+@import "bootstrap/scss/badge";
+// @import "bootstrap/scss/jumbotron";
+// @import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+// @import "bootstrap/scss/media";
+// @import "bootstrap/scss/list-group";
+// @import "bootstrap/scss/close";
+// @import "bootstrap/scss/modal";
+// @import "bootstrap/scss/tooltip";
+// @import "bootstrap/scss/popover";
+// @import "bootstrap/scss/carousel";
+@import "bootstrap/scss/utilities";
+//// bootswatch theme overrides
+// @import "bootswatch/dist/cerulean/bootswatch";
+@import "bootswatch/dist/cosmo/bootswatch";
+// @import "bootswatch/dist/cyborg/bootswatch";
+// @import "bootswatch/dist/darkly/bootswatch";
+// @import "bootswatch/dist/flatly/bootswatch";
+// @import "bootswatch/dist/journal/bootswatch";
+// @import "bootswatch/dist/litera/bootswatch";
+// @import "bootswatch/dist/lumen/bootswatch";
+// @import "bootswatch/dist/lux/bootswatch";
+// @import "bootswatch/dist/materia/bootswatch";
+// @import "bootswatch/dist/minty/bootswatch";
+// @import "bootswatch/dist/pulse/bootswatch";
+// @import "bootswatch/dist/sandstone/bootswatch";
+// @import "bootswatch/dist/simplex/bootswatch";
+// @import "bootswatch/dist/sketchy/bootswatch";
+// @import "bootswatch/dist/slate/bootswatch";
+// @import "bootswatch/dist/solar/bootswatch";
+// @import "bootswatch/dist/spacelab/bootswatch";
+// @import "bootswatch/dist/superhero/bootswatch";
+// @import "bootswatch/dist/united/bootswatch";
+// @import "bootswatch/dist/yeti/bootswatch";
+
+/* ------------------ mixins ------------------ */
+
+@import "./fonts";
+
+/* ------------------ variables ------------------ */
+
+// font
+$font: "Proxima Nova";
+
+$bodyBg: #F2F2F2;
+$bodyTextColour: #363636;
+$green: #aae794;
+$darkgreen: #71c09c;
+$blue: #7b9ef8;
+
+//status
+$pending: #faefce;
+$blocked: #e2e2e2;
+$launched: #d4efcf;
+$overdue: #fadace;
+
+//boxes
+$primary: #FF4D36;
+$boxgreen: #329994;
+$boxdarkgreen: #329994;
+$boxblue: #3b5da0;
+$boxdarkblue: #062484;
+
+/* ------------------ styles ------------------ */
+
+// Global Rules
+*, * {
+  margin: 0;
+  padding: 0;
+  font-family: $font;
+}
+
+.App {
+  overflow-x: hidden;
+  color: $bodyTextColour;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  & > .pageContent {
+    flex: 1;
+    overflow: auto;
+    padding-top: 80px;
+    overflow: hidden;
+  }
+  background-color: $bodyBg;
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  z-index: 100;
+  background: #fff;
+  -webkit-box-shadow: 0px 10px 5px -8px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 10px 5px -8px rgba(0,0,0,0.3);
+  box-shadow: 0px 10px 5px -8px rgba(0,0,0,0.3);
+
+  &.mainmenu {
+    background: none;
+    box-shadow: none;
+    padding: 0rem 1rem;
+
+    ul.navbar-nav {
+      line-height: 28px;
+      display: inline-block;
+      text-align: left;
+  
+      .nav-item {
+        display: inline-block;
+        margin-right: 30px;
+        font-weight: 600;
+        text-align: left;
+  
+        a {
+          color:#363636;
+          -webkit-transition: color 1s;
+          transition: color 1s;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 575px) {
+    .navbar-brand {
+      &.col-2 {
+        max-width: 100%;
+        flex: 0 0 100%;
+      }
+      img {
+        margin: auto;
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  ul.navbar-nav {
+    line-height: 38px;
+    text-align: right;
+    display: inline-block;
+
+    .nav-item {
+      display: inline-block;
+      margin-right: 20px;
+      font-weight: 600;
+      text-align: left;
+
+      a {
+        color:#363636;
+        -webkit-transition: color 1s;
+        transition: color 1s;
+      }
+
+      &.getstarted {
+        margin-right: 0px;
+      }
+    }
+  }
+}
+
+a {
+  color: $primary;
+
+  &:hover {
+    color:$boxgreen;
+  }
+}
+
+h1 {
+  font-size: 55px;
+  font-family: "Proxima Nova";
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: -2px;
+  color: #fff;
+
+  @media (max-width: 1200px) {
+    font-size: 50px;
+  }
+}
+
+h2 {
+}
+
+h3 {
+}
+
+.project {
+  position: relative;
+  margin-top: 0px;
+  z-index: 20;
+}
+
+.nogutter .col-6 {
+  padding: 0;
+}
+
+.mobile {
+  @media (max-width: 767px) {
+    .col-6 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+  @media (max-width: 575px) {
+    .row {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+    &.row {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+    .ml-2,
+    .mx-2 {
+      margin-left: 0rem !important;
+    }
+    .mr-2,
+    .mx-2 {
+      margin-right: 0rem !important;
+    }
+    .two {
+      display: none;
+    }
+  }
+}
+
+.container {
+  @media (max-width: 575px) {
+    &.mt-5,
+    &.my-5 {
+      margin-top: 1rem !important;
+    }
+  }
+}
+
+// Hero
+
+.hero {
+  position: relative;
+  background: url("../../assets/images/Bottany.jpg") no-repeat center center;
+  background-size: cover;
+  height: 300px;
+  top: 0px;
+
+  &:before {
+    content:'';
+    background-color: #272727;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width:100%;
+    height:100%;
+    z-index:1;
+    opacity: 0.8;
+  }
+
+  h1 {
+    padding-top: 125px;
+    @media (max-width: 767px) {
+      text-align: center;
+    }
+  }
+
+  h2 {
+    color: $blue;
+    font-size: 20px;
+    font-family: "Proxima Nova";
+    font-weight: 800;
+
+    @media (max-width: 767px) {
+      text-align: center;
+    }
+  }
+
+  .content {
+    position: relative;
+    z-index:10;
+    display: inline-flex;
+  }
+}
+
+// Content
+
+.maincontent {
+  h4 {
+    font-size:25px;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+}
+
+// Orange Box
+
+.oBox {
+  position: relative;
+  background: #FF4D36;
+  color: #fff;
+  padding:15px 20px;
+  -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
+  font-family: "Proxima Nova";
+  width: 100%;
+  //overflow: hidden; to show dropdown list of contact form
+  z-index: 100;
+}
+
+.pullTop {
+  margin-top:-100px;
+}
+
+// Boxes - threeBlocks component
+
+.boxes {
+  position: relative;
+  background: #363636;
+  -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
+  font-family: "Proxima Nova";
+  width: 100%;
+  overflow: hidden;
+  margin: 0px;
+  transition: all 1s ease;
+  height: 240px;
+
+  &:hover {
+    text-decoration: none;
+    transition: all 1s ease;
+    &:before {
+      background: #FF4D36;
+    }
+    
+  }
+
+  &:before {
+    content:'';
+    background-color: #272727;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width:100%;
+    height:100%;
+    z-index:1;
+    opacity: 0.8;
+  }
+
+  &.one {
+    background: url("../../assets/images/one.jpg") no-repeat center center;
+    background-size: cover;
+  }
+  &.two {
+    background: url("../../assets/images/two.jpg") no-repeat center center;
+    background-size: cover;
+  }
+  &.three {
+    background: url("../../assets/images/three.jpg") no-repeat center center;
+    background-size: cover;
+  }
+
+  &:after {
+    background: #fff;
+    transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
+    z-index: 0;
+    opacity: 0.8;
+  }
+
+  .border {
+    border:2px solid #fff;
+    padding:20px;
+    height: 100%;
+  }
+
+  .title {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    color: $bodyTextColour;
+    font-weight: 600;
+    font-size: 30px;
+    color: #fff;
+    z-index: 10;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  p {
+    position: relative;
+    color: #fff;
+    z-index: 10;
+
+    @media (max-width: 991px) {
+      width: 80%;
+    }
+  }
+  .boxicon {
+    position: absolute;
+    right: 1rem;
+    width: 60px;
+    z-index: 10;
+
+    @media (max-width: 767px) {
+      bottom: 1rem;
+    }
+  }
+}
+
+// Product Box - for properties pages
+.products {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: stretch;
+
+  .product-box {
+    background: #fff;
+    min-width: 250px;
+    margin: 15px;
+    .link
+    {
+      img {
+        width:100%;
+      }
+      h5 {
+        color: black;
+        //font-weight: 600;
+        font-size:14px;
+        padding:14px 10px 10px;
+      }
+    }
+  }
+}
+
+
+// Product Box - for index page componenets
+
+.productbox {
+  background: #fff;
+  max-height: 180px;
+
+  img {
+    width:100%;
+  }
+  .content {
+    padding:14px 10px 10px;
+    h5 {
+      color:#272727;
+      font-weight: 600;
+      font-size:14px;
+    }
+  }
+  &.all {
+    text-align: center;
+    h5 {
+      line-height: 150px;
+    }
+  }
+}
+
+
+// Buttons
+
+.cta {
+  background: $primary;
+  border-radius: 0px;
+  color: #fff !important;
+  -webkit-box-shadow: 0px 10px 5px -8px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 10px 5px -8px rgba(0,0,0,0.3);
+  box-shadow: 0px 10px 5px -8px rgba(0,0,0,0.3);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: "Proxima Nova";
+  text-transform: uppercase;
+  text-align: center;
+  display: inline-block;
+  transition: background-color 1s ease !important;
+
+  &.white {
+    background: #fff;
+    color: $darkgreen;
+  }
+
+  .plus {
+    -webkit-transition: -webkit-transform 1s ease-in-out;
+    transition: transform 1s ease-in-out;
+  }
+
+  &:hover {
+    color: #fff;
+    background: rgb(92, 170, 134);
+    text-decoration: none;
+
+    .plus {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+}
+
+
+// Testimonials component
+#testimonials-component {
+  .container {
+    padding: 10px 0;
+    
+    .testimonial {
+      margin: 0px;
+      background-color: white;
+      .col-md-4 {
+        padding: 0px;
+      }
+      .image {
+
+        img {
+          width: 100%;
+        }
+      }
+      .text {
+        margin: 10px 0 0 0;
+        p {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}
+
+// Contactform component
+
+#form {
+  p {
+      font-size: 25px;
+      color: white;
+      margin: 5px 0;
+    }
+  input {
+    border: none;
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  .input-select {
+    margin-bottom: 10px;
+    color: black;
+    .css-2613qy-menu { // drop down menu
+      border-radius: initial;
+    } 
+    .css-1pahdxg-control { // on focus
+      border: none;
+      border-radius: initial;
+    }
+    .css-1wa3eu0-placeholder { // placeholder
+      padding-left: 5px;
+    }
+    .css-1hwfws3 { // text
+      padding: 5px 8px;
+    }
+    .css-yk16xz-control // border
+    {
+      border: none;
+      border-radius: initial;
+    }
+    .css-1okebmr-indicatorSeparator { // to hide |
+      visibility: hidden; 
+    }
+  }
+  textarea {
+    border: none;
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  .col-6,
+  .col-12 {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  .clear {
+    border-radius: 50px;
+    padding: 5px;
+    max-width: 120px;
+    text-transform: uppercase;
+    margin: auto;
+    display: block;
+    cursor: pointer;
+  }
+
+  .enquiry-btn {
+    background: transparent;
+    color: white;
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: "Proxima Nova";
+    text-transform: uppercase;
+    display: inline-block;
+    cursor: pointer;
+    float: none;
+    text-align: center;
+    transition: background-color 1s ease;
+    width: 80%;
+    padding: 15px;
+    border: none;
+    width: 100%;
+    margin-bottom: 10px;
+
+    &:hover {
+      color: #fff;
+      background: $boxgreen;
+    }
+
+    img {
+      width: 12%;
+    }
+  }
+}
+
+// Contact Page
+#contact-page {
+  // Row 1
+  .contactform-back {
+    padding: 20px 0;
+    background-color: #FF4D36;
+  }
+  .contact-form-right {
+    overflow: visible;
+    p {
+      font-size: 25px;
+      color: white;
+      margin: 5px 0;
+    }
+
+    .mobile-number {
+      font-size: 40px;
+    }
+
+    .stay-connected {
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
+    hr {
+      margin: 20px 0;
+      border-color: white;
+    }
+
+    .fontawesome-icon {
+      margin-right: 20px;
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  }
+  // Row 2
+  .background-white {
+    background-color: white;
+  
+    .text-area {
+      padding: 50px 0;
+      p {
+        margin: 30px 0;
+      }
+    }
+  }
+}
+
+// template/blog.js - this is for each product page
+.product-product {
+  .product-product-image{}
+  p {
+    font-size: 22px;
+  }
+  .product-product-content{
+    font-size: 18px;
+  }
+}
+
+// Footer
+
+footer {
+  background: #fff;
+  color: #363636;
+
+  .logo {
+    @media (max-width: 767px) {
+      text-align: center;
+    }
+  }
+
+  .col-md-2 {
+    @media (max-width: 991px) {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+    @media (max-width: 767px) {
+      flex: 0 0 33%;
+      max-width: 33%;
+    }
+  }
+
+  .col-md-5 {
+    text-align: right;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-family: "Proxima Nova";
+    font-weight: 800;
+    color: #fff;
+
+    @media (max-width: 1200px) {
+      font-size: 22px;
+    }
+    @media (max-width: 991px) {
+      font-size: 18px;
+    }
+    @media (max-width: 767px) {
+      font-size: 24px;
+    }
+  }
+
+  a {
+    color: #363636;
+    font-weight: 600;
+    line-height: 28px;
+    -webkit-transition: color 1s;
+    transition: color 1s;
+
+    &:hover {
+      color: $primary;
+      text-decoration: none;
+    }
+  }
+
+  p {
+    color: #363636;
+    font-size: 12px;
+  }
+  ul.links {
+    list-style: none;
+    margin: 0px 0px 20px;
+
+    @media (max-width: 767px) {
+      padding: 0px;
+    }
+  }
+  .creds {
+    border-top:1px solid #eee;
+    padding-top: 10px;
+  }
+}

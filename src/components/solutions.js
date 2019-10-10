@@ -9,9 +9,9 @@ import student from '../assets/images/student.jpg'
 import hotel from '../assets/images/hotel.jpg'
 
 const Solutions = (props) => (
-    <Container className="m-0 p-0">
+    <Container>
         <div className="row">
-          <Link to='/dinning' className='col-sm productbox p-0 mx-2 mb-3'>
+          <Link to='/dinning' className='col-sm productbox p-0 mr-2 mb-3'>
             <img src={dinning} alt="dinning"></img>
             <div className="content">
               <h5 className="title">Dinning Sets</h5>
@@ -46,7 +46,7 @@ const Solutions = (props) => (
             </div>
           </Link>
 
-          <Link to='/property' className='col-sm productbox all p-0 mx-2 mb-3'>
+          <Link to='/property' className='col-sm productbox all p-0 ml-2 mb-3'>
             <div className="content">
               <h5 className="title">View All</h5>
             </div>

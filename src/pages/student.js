@@ -10,10 +10,10 @@ function getStudent(data) {
   const PostsArray = []
   data.allMarkdownRemark.edges.forEach(post => {
     PostsArray.push(
-      <div className="productbox col-md p-3 mx-2 mb-3">
-        <Link to={post.node.frontmatter.path} className="title">
+      <div className="product-box">
+        <Link to={post.node.frontmatter.path} className="link">
           <Img fluid={post.node.frontmatter.featuredImage.childImageSharp.fluid} />
-          {post.node.frontmatter.title}
+          <h5>{post.node.frontmatter.title}</h5>
         </Link>
       </div>
     )
@@ -30,7 +30,7 @@ const Student = props => (
             <div className="content">
               <div className="col-12">
                 <h1>Student Accommodation Sets</h1>
-                <a href="/" className="cta tick p-4">Start Saving Here</a>
+                <Link to="/contact" className="cta tick p-4">Start Saving Here</Link>
               </div>
             </div>
           </div>
@@ -62,7 +62,8 @@ const Student = props => (
         `}
         render={data => (
           <>
-            <div className="row">{getStudent(data)}</div>
+            <h4 className="mb-0">Products</h4>
+            <div className="row products">{getStudent(data)}</div>
           </>
         )}
       />

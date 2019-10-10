@@ -45,8 +45,8 @@ const ContactPage = () => {
 	      </div>
 	      </Container>
 	  </div>
-	  <Container className="threeBlocks-style">
-	  	<p><strong>Shop by collection</strong></p>
+	  <Container className="pt-4 pb-4">
+	  	<h4>Shop by collection</h4>
 	  	<ThreeBlocks />
 	  </Container>
     </div>

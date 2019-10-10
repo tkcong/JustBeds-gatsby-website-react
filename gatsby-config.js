@@ -39,6 +39,8 @@ module.exports = {
 //        name: 'pages'
       }
     },
+    //'gatsby-plugin-netlify-cms',
+    //'gatsby-plugin-netlify',
 
     // {
     //   resolve: 'gatsby-source-filesystem',

@@ -1,7 +1,6 @@
 import React from "react";
-import { StaticQuery, graphql } from "gatsby";
+import { StaticQuery, graphql, Link } from "gatsby";
 import { Container } from "reactstrap";
-import Link from "gatsby-link";
 
 import Layout from "../components/layout";
 import ThreeNav from '../components/threeBlocks'
@@ -29,7 +28,7 @@ const Property = props => (
             <div className="content">
               <div className="col-12">
                 <h1>Property Accommodation Sets</h1>
-                <a href="/" className="cta tick p-4">Start Saving Here</a>
+                <Link to="/contact" className="cta tick p-4">Start Saving Here</Link>
               </div>
             </div>
           </div>
