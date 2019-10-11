@@ -1,22 +1,24 @@
-import React from "react";
-import { StaticQuery, graphql, Link } from "gatsby";
-import { Container } from "reactstrap";
+import React from "react"
+import { StaticQuery, graphql, Link } from "gatsby"
+import { Container } from "reactstrap"
+import Img from "gatsby-image"
 
-import Layout from "../components/layout";
+import Layout from "../components/layout"
 import ThreeNav from '../components/threeBlocks'
 
 function getBedroom(data) {
-  const PostsArray = [];
-  data.allMarkdownRemark.edges.forEach(post =>
+  const PostsArray = []
+  data.allMarkdownRemark.edges.forEach(post => {
     PostsArray.push(
-      <div className="productbox col-sm p-3 mx-2 mb-3">
-        <Link to={post.node.frontmatter.path} className="title">
-          {post.node.frontmatter.title}
+      <div className="product-box">
+        <Link to={post.node.frontmatter.path} className="link">
+          <Img fluid={post.node.frontmatter.featuredImage.childImageSharp.fluid} />
+          <h5>{post.node.frontmatter.title}</h5>
         </Link>
       </div>
     )
-  );
-  return PostsArray;
+  });
+  return PostsArray
 }
 
 const Bedroom = props => (
@@ -38,13 +40,20 @@ const Bedroom = props => (
       <Container className="py-3 mobile">
       <StaticQuery
         query={graphql`
-          query BedroomQuery {
-            allMarkdownRemark(filter: { frontmatter: { date: {} } }) {
+          query {
+            allMarkdownRemark (filter: { frontmatter: { category: {regex: "/bedroom/"} } }) {
               edges {
                 node {
                   frontmatter {
                     title
                     path
+                    featuredImage {
+                      childImageSharp {
+                        fluid(maxWidth: 100) {
+                          ...GatsbyImageSharpFluid
+                        }
+                      }
+                    }
                   }
                 }
               }
@@ -53,7 +62,8 @@ const Bedroom = props => (
         `}
         render={data => (
           <>
-            <div className="row">{getBedroom(data)}</div>
+            <h4 className="mb-0">Products</h4>
+            <div className="row products">{getBedroom(data)}</div>
           </>
         )}
       />

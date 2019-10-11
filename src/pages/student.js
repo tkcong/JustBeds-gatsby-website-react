@@ -41,7 +41,7 @@ const Student = props => (
       <StaticQuery
         query={graphql`
           query {
-            allMarkdownRemark {
+            allMarkdownRemark (filter: { frontmatter: { category: {regex: "/student/"} } }) {
               edges {
                 node {
                   frontmatter {

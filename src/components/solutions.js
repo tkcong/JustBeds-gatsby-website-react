@@ -11,7 +11,7 @@ import hotel from '../assets/images/hotel.jpg'
 const Solutions = (props) => (
     <Container>
         <div className="row">
-          <Link to='/dinning' className='col-sm productbox p-0 mr-2 mb-3'>
+          <Link to='/bedroom' className='col-sm productbox p-0 mr-2 mb-3'>
             <img src={dinning} alt="dinning"></img>
             <div className="content">
               <h5 className="title">Dinning Sets</h5>
@@ -39,7 +39,7 @@ const Solutions = (props) => (
             </div>
           </Link>
 
-          <Link to='/hotels' className='col-sm productbox p-0 mx-2 mb-3'>
+          <Link to='/hotel' className='col-sm productbox p-0 mx-2 mb-3'>
             <img src={hotel} alt="hotel"></img>
             <div className="content">
               <h5 className="title">Hotels &amp; Hostels</h5>

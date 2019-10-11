@@ -53,7 +53,7 @@ const TemplateWrapper = ({ children, data }) => {
               <Link to='/student' className='nav-link'>Student Accomodation</Link>
             </li>
             <li className='nav-item'>
-              <Link to='/hotels' className='nav-link'>Hotels &amp; Hostels</Link>
+              <Link to='/hotel' className='nav-link'>Hotels &amp; Hostels</Link>
             </li>
             <li className='nav-item'>
               <Link to='/contact' className='nav-link'>Contact Us</Link>
