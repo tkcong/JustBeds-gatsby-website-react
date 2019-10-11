@@ -120,7 +120,8 @@ $boxdarkblue: #062484;
 *, * {
   margin: 0;
   padding: 0;
-  font-family: $font;
+  font-family: 'proxima-nova', sans-serif !important;
+  //font-family: $font;
 }
 
 .App {
@@ -225,7 +226,6 @@ a {
 
 h1 {
   font-size: 55px;
-  font-family: "Proxima Nova";
   font-weight: 600;
   font-style: normal;
   letter-spacing: -2px;
@@ -322,7 +322,6 @@ h3 {
   h2 {
     color: $blue;
     font-size: 20px;
-    font-family: "Proxima Nova";
     font-weight: 800;
 
     @media (max-width: 767px) {
@@ -357,7 +356,6 @@ h3 {
   -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
-  font-family: "Proxima Nova";
   width: 100%;
   //overflow: hidden; to show dropdown list of contact form
   z-index: 100;
@@ -375,7 +373,6 @@ h3 {
   -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
-  font-family: "Proxima Nova";
   width: 100%;
   overflow: hidden;
   margin: 0px;
@@ -529,7 +526,6 @@ h3 {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 1px;
-  font-family: "Proxima Nova";
   text-transform: uppercase;
   text-align: center;
   display: inline-block;
@@ -660,7 +656,6 @@ h3 {
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 1px;
-    font-family: "Proxima Nova";
     text-transform: uppercase;
     display: inline-block;
     cursor: pointer;
@@ -786,7 +781,6 @@ footer {
 
   h3 {
     font-size: 24px;
-    font-family: "Proxima Nova";
     font-weight: 800;
     color: #fff;
 

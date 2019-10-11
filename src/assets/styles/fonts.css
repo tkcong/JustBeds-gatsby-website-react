@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:800,800i');
 
 @font-face {
+  font-family: 'ProximaNova-LightIt';
+  src: url('../../assets/fonts/proxima_ssv/Proxima-Nova-Extrabold.otf');
+}
+
+@font-face {
+  font-family: 'ProximaNova-Extrabld';
+  src: url('../../assets/fonts/proxima_ssv/Proxima-Nova-Alt-Light.otf');
+}
+
+@font-face {
   font-family: 'Proxima Nova';
   src: url('../../assets/fonts/Proxima-Nova-Regular-webfont.woff');
   src: url('../../assets/fonts/Proxima-Nova-Regular-webfont.eot?#iefix') format('embedded-opentype'),
