@@ -4,7 +4,7 @@ import Footer from '../layout/Footer'
 import { StaticQuery, graphql, Link } from 'gatsby'
 
 import SEO from '../../components/seo'
-import MainLogo from '../../assets/images/logo.svg'
+import MainLogo from '../../assets/images/logo.png'
 
 // code syntax-highlighting theme
 // feel free to change it to another one
