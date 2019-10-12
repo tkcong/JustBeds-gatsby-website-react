@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/JustBeds-gatsby-website-react",
   siteMetadata: {
     title: 'Just Beds',
     description: 'Just Beds Shopping list website',
